@@ -1,11 +1,14 @@
-import React, { Suspense } from 'react';
-import { motion } from 'framer-motion';
-import MarkdownRenderer from '../components/ui/MarkdownRenderer';
-import TeamMemberCard from '../components/ui/TeamMemberCard';
-import SkeletonLoader from '../components/ui/SkeletonLoader';
-import { teamContent, teamMembers } from '../data/teamData';
+import React, { Suspense } from "react";
+import { motion } from "framer-motion";
+import { Calendar } from "lucide-react";
+import MarkdownRenderer from "../components/ui/MarkdownRenderer";
+import TeamMemberCard from "../components/ui/TeamMemberCard";
+import SkeletonLoader from "../components/ui/SkeletonLoader";
+import { teamContent, teamMembers } from "../data/teamData";
 
 const TeamPage: React.FC = () => {
+  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -16,7 +19,7 @@ const TeamPage: React.FC = () => {
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
         <MarkdownRenderer content={teamContent} />
-        
+
         <div className="mt-8 space-y-6">
           {teamMembers.map((member, index) => (
             <motion.div
@@ -35,7 +38,7 @@ const TeamPage: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,12 +47,21 @@ const TeamPage: React.FC = () => {
         >
           <h2 className="text-xl font-semibold mb-4">Join Our Team</h2>
           <p className="mb-4">
-            We're always looking for talented individuals who are passionate about technology and innovation. 
-            If you're interested in working with us, check out our open positions or send us your resume.
+            We're always looking for talented individuals who are passionate
+            about technology and innovation. If you're interested in working
+            with us or learning more about our team culture, book a call with us
+            today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="gh-btn gh-btn-primary">View Open Positions</button>
-            <button className="gh-btn">Send Resume</button>
+          <div className="flex">
+            <a
+              href={calendlyLink}
+              target="_blank"
+              rel="noreferrer"
+              className="gh-btn gh-btn-primary flex items-center"
+            >
+              <Calendar size={16} className="mr-2" />
+              Book a Call to Discuss Opportunities
+            </a>
           </div>
         </motion.div>
       </Suspense>

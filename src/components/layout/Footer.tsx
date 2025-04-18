@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Code2, Github, Twitter, Linkedin } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Code2, Github, Twitter, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -12,27 +12,18 @@ const Footer: React.FC = () => {
             <span className="ml-2 text-lg font-semibold">Krane Apps</span>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a 
-              href="https://github.com/kraneapps" 
-              target="_blank" 
+            <a
+              href="https://github.com/Krane-Apps"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
-            <a 
-              href="https://twitter.com/kraneapps" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-text-secondary hover:text-text-primary"
-              aria-label="Twitter"
-            >
-              <Twitter size={20} />
-            </a>
-            <a 
-              href="https://linkedin.com/company/kraneapps" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/company/kraneapps/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary"
               aria-label="LinkedIn"
@@ -43,16 +34,28 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-8 border-t border-border pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
-            <Link to="/about" className="text-text-secondary hover:text-text-primary text-sm">
+            <Link
+              to="/about"
+              className="text-text-secondary hover:text-text-primary text-sm"
+            >
               About
             </Link>
-            <Link to="/portfolio" className="text-text-secondary hover:text-text-primary text-sm">
+            <Link
+              to="/portfolio"
+              className="text-text-secondary hover:text-text-primary text-sm"
+            >
               Portfolio
             </Link>
-            <Link to="/team" className="text-text-secondary hover:text-text-primary text-sm">
+            <Link
+              to="/team"
+              className="text-text-secondary hover:text-text-primary text-sm"
+            >
               Team
             </Link>
-            <Link to="/contact" className="text-text-secondary hover:text-text-primary text-sm">
+            <Link
+              to="/contact"
+              className="text-text-secondary hover:text-text-primary text-sm"
+            >
               Contact
             </Link>
           </div>

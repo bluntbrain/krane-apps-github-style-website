@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Code2, Menu, Moon, Sun, X } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Code2, Menu, Moon, Sun, X, Calendar } from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
 
   return (
     <header className="bg-bg-secondary border-b border-border sticky top-0 z-50">
@@ -19,24 +20,34 @@ const Header: React.FC = () => {
           </div>
 
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <button 
+            <button
               onClick={toggleTheme}
               className="p-2 rounded-md text-text-secondary hover:bg-bg-primary"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <a 
-              href="https://github.com/kraneapps" 
-              target="_blank" 
+            <a
+              href="https://github.com/Krane-Apps"
+              target="_blank"
               rel="noopener noreferrer"
               className="gh-btn"
             >
               GitHub
             </a>
-            <button className="gh-btn gh-btn-primary">
-              Get Started
-            </button>
+            <a
+              href={calendlyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gh-btn gh-btn-primary flex items-center"
+            >
+              <Calendar size={16} className="mr-2" />
+              Book a Call
+            </a>
           </div>
 
           <div className="md:hidden">
@@ -54,52 +65,58 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-bg-secondary border-b border-border p-4">
           <div className="flex flex-col space-y-4">
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="sidebar-nav-item"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
-            <Link 
-              to="/portfolio" 
+            <Link
+              to="/portfolio"
               className="sidebar-nav-item"
               onClick={() => setMobileMenuOpen(false)}
             >
               Portfolio
             </Link>
-            <Link 
-              to="/team" 
+            <Link
+              to="/team"
               className="sidebar-nav-item"
               onClick={() => setMobileMenuOpen(false)}
             >
               Team
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="sidebar-nav-item"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
             <div className="flex items-center space-x-4 pt-2">
-              <button 
+              <button
                 onClick={toggleTheme}
                 className="p-2 rounded-md text-text-secondary hover:bg-bg-primary"
               >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
-              <a 
-                href="https://github.com/kraneapps" 
-                target="_blank" 
+              <a
+                href="https://github.com/Krane-Apps"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="gh-btn"
               >
                 GitHub
               </a>
-              <button className="gh-btn gh-btn-primary">
-                Get Started
-              </button>
+              <a
+                href={calendlyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gh-btn gh-btn-primary flex items-center"
+              >
+                <Calendar size={16} className="mr-2" />
+                Book a Call
+              </a>
             </div>
           </div>
         </div>
