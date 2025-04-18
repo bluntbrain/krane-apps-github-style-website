@@ -1,78 +1,123 @@
 export const portfolioProjects = [
   {
     id: 1,
-    title: 'DeFi Lending Platform',
-    description: 'A decentralized finance platform that enables peer-to-peer lending and borrowing of digital assets with automated interest rates based on supply and demand.',
+    title: 'Chain Monsters',
+    description: 'A turn-based RPG action game on the blockchain where players control monsters, engage in PvP battles, strategically move on a 5x8 grid, attacking enemies to increase mana and decrease opponents health.',
     language: 'Solidity',
-    stars: 78,
-    forks: 23,
-    tags: ['DeFi', 'Ethereum', 'Smart Contracts'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    stars: 48,
+    forks: 15,
+    tags: ['Blockchain', 'Gaming', 'StarkNet'],
+    links: {
+      github: 'https://github.com/bluntbrain/chain-monsters',
+      live: 'https://chainmonsters.xyz',
+      ethglobal: 'https://ethglobal.com/showcase/chain-monsters'
+    },
+    achievement: 'StarkHack Winner 🏆 March 2024',
+    prize: '$4,000',
+    category: 'blockchain',
+    imageUrl: 'https://images.unsplash.com/photo-1642415799357-5667d03004eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
   {
     id: 2,
-    title: 'Telemedicine Mobile App',
-    description: 'A HIPAA-compliant mobile application connecting patients with healthcare providers for virtual consultations, prescription management, and medical record access.',
-    language: 'React Native',
-    stars: 42,
-    forks: 12,
-    tags: ['Healthcare', 'Mobile', 'API'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    title: 'RepoRewards',
+    description: 'A blockchain-based platform designed to make rewarding open-source contributions on GitHub super easy and transparent. Built on Base, Ethereum and several EVM chains.',
+    language: 'Solidity',
+    stars: 92,
+    forks: 31,
+    tags: ['Blockchain', 'Open Source', 'Base'],
+    links: {
+      github: 'https://github.com/bluntbrain/repo-rewards',
+      live: 'https://reporewards.xyz',
+      ethglobal: 'https://ethglobal.com/showcase/reporewards'
+    },
+    achievement: 'SuperHack Winner 🚀 February 2024',
+    prize: '$10,000',
+    category: 'blockchain',
+    imageUrl: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
   {
     id: 3,
-    title: 'NFT Marketplace',
-    description: 'A platform for creators to mint, list, and sell NFTs with advanced features like royalties, auctions, and collection management.',
+    title: 'ZK Credit Score',
+    description: 'A blockchain-based credit scoring system that revolutionizes DeFi by enabling on-chain creditworthiness with zero-knowledge proofs. It analyzes cross-chain wallet activity to verify token balances privately.',
     language: 'TypeScript',
-    stars: 104,
-    forks: 34,
-    tags: ['NFT', 'Blockchain', 'Web3'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    stars: 67,
+    forks: 19,
+    tags: ['ZK Proofs', 'DeFi', 'Privacy'],
+    links: {
+      github: 'https://github.com/bluntbrain/zk-credit-score',
+      live: 'https://zkcreditscore.xyz',
+      ethglobal: 'https://ethglobal.com/showcase/zk-credit-score'
+    },
+    achievement: 'ETH Bangkok Winner 🏆 December 2023',
+    prize: '$2,000',
+    category: 'blockchain',
+    imageUrl: 'https://images.unsplash.com/photo-1621579429208-bdb2d07d2edf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
   {
     id: 4,
-    title: 'Supply Chain Tracking System',
-    description: 'A blockchain-based solution for tracking products throughout the supply chain, ensuring authenticity and providing transparency to consumers.',
-    language: 'Go',
-    stars: 63,
-    forks: 21,
-    tags: ['Supply Chain', 'Enterprise', 'Hyperledger'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    title: 'Inspector AI',
+    description: 'A Chrome extension that analyzes smart contracts to make web3 more secure using AI. It provides risk assessments, integrates market data, and includes community reviews for safer blockchain interactions.',
+    language: 'JavaScript',
+    stars: 53,
+    forks: 12,
+    tags: ['AI', 'Web3', 'Security'],
+    links: {
+      github: 'https://github.com/bluntbrain/inspector-ai',
+      live: 'https://inspectorai.app',
+      chrome: 'https://chrome.google.com/webstore'
+    },
+    category: 'web',
+    imageUrl: 'https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
   {
     id: 5,
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'A business intelligence tool that leverages machine learning algorithms to analyze data, identify patterns, and provide actionable insights through an intuitive dashboard.',
-    language: 'Python',
-    stars: 87,
-    forks: 29,
-    tags: ['AI', 'Data Science', 'Analytics'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    title: 'Aegis Agent',
+    description: 'An AI-driven agent that monitors transactions 24/7, detects anomalies, and triggers alerts/emergency actions to protect users from potential blockchain security threats.',
+    language: 'TypeScript',
+    stars: 71,
+    forks: 23,
+    tags: ['AI', 'Security', 'Monitoring'],
+    links: {
+      github: 'https://github.com/bluntbrain/aegis-agent',
+      live: 'https://aegisagent.io'
+    },
+    category: 'web',
+    imageUrl: 'https://images.unsplash.com/photo-1639762681666-e0cfbcf94f8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
   {
     id: 6,
-    title: 'Decentralized Exchange (DEX)',
-    description: 'An automated market maker protocol enabling trustless trading of digital assets directly from users\' wallets without centralized intermediaries.',
+    title: 'MulTEEverse',
+    description: 'A Trust-Weighted Consensus Mechanism for Multi-TEE Distributed network. A "Proof of Attestation" system for secure and trusted computation in decentralized environments.',
     language: 'Rust',
-    stars: 112,
-    forks: 43,
-    tags: ['DeFi', 'Blockchain', 'DEX'],
-    url: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    stars: 44,
+    forks: 16,
+    tags: ['TEE', 'Consensus', 'Security'],
+    links: {
+      github: 'https://github.com/bluntbrain/multeverse',
+      docs: 'https://docs.multeverse.dev'
+    },
+    category: 'blockchain',
+    imageUrl: 'https://images.unsplash.com/photo-1637846099930-86f17d9934c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
   },
 ];
 
 export const portfolioContent = `
 # Our Portfolio
 
-At Krane Apps, we've partnered with startups and established companies to build innovative solutions across various industries. Our portfolio showcases our expertise in MVP development, blockchain technology, and custom software solutions.
+At Krane Apps, we specialize in three core areas: Blockchain Solutions, Mobile Applications, and Full-Stack Web Development. Our award-winning projects have been recognized in global hackathons and are used by thousands of users worldwide.
+
+## Expertise Areas
+
+### Blockchain Development
+We build innovative solutions on various blockchain networks including Ethereum, StarkNet, Base, and other EVM-compatible chains. Our expertise spans smart contracts, DeFi applications, gaming, and privacy-preserving technologies.
+
+### Mobile Applications
+Our React Native expertise allows us to deliver high-performance cross-platform mobile applications with native-like experiences for both iOS and Android platforms.
+
+### Web Applications
+Using React, Next.js, and robust backend technologies, we create scalable and responsive web applications that provide seamless user experiences.
 
 ## Featured Projects
 
-Explore our recent work below. Each project represents our commitment to technical excellence, user-centered design, and business value creation.
+Explore our award-winning work below, including hackathon winners and production-ready applications.
 `;
