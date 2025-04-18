@@ -22,12 +22,16 @@ const PortfolioPage: React.FC = () => {
   const [currentImage, setCurrentImage] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
+  // Remove SOL.DX from the main project list since it's featured separately
+  const filteredPortfolioProjects = useMemo(() => {
+    return portfolioProjects.filter((project) => project.id !== 1);
+  }, []);
+
   const filteredProjects = useMemo(() => {
-    if (!categoryFilter) return portfolioProjects;
-    return portfolioProjects.filter(
-      (project) => project.category === categoryFilter
-    );
-  }, [categoryFilter]);
+    const projects = filteredPortfolioProjects;
+    if (!categoryFilter) return projects;
+    return projects.filter((project) => project.category === categoryFilter);
+  }, [categoryFilter, filteredPortfolioProjects]);
 
   const openLightbox = (imageUrl: string) => {
     setCurrentImage(imageUrl);
@@ -51,6 +55,74 @@ const PortfolioPage: React.FC = () => {
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
         <MarkdownRenderer content={portfolioContent} />
+
+        {/* Featured Project Section - Now at the top */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-12 p-6 border border-border rounded-lg bg-bg-primary shadow-md"
+        >
+          <h2 className="text-2xl font-semibold mb-4 text-accent">
+            Featured Project: SOL.DX - Solana Token Launchpad
+          </h2>
+          <div className="md:flex">
+            <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+              <div className="relative overflow-hidden rounded-md">
+                <img
+                  src="/images/projects/sol-dx.png"
+                  alt="SOL.DX - Solana Token Launchpad"
+                  className="rounded-md w-full object-cover h-64 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => openLightbox("/images/projects/sol-dx.png")}
+                />
+                <div className="absolute inset-0 bg-black/10 hover:bg-black/30 transition-colors opacity-0 hover:opacity-100 flex items-center justify-center">
+                  <span className="text-white bg-black/50 px-3 py-1 rounded-md text-sm">
+                    View Image
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <p className="mb-4">
+                SOL.DX is our flagship token launchpad built specifically for
+                the Solana ecosystem. It provides project creators with powerful
+                tools to launch tokens with customizable tokenomics, vesting
+                schedules, and distribution mechanisms.
+              </p>
+              <ul className="list-disc list-inside mb-4 text-text-secondary">
+                <li>Intuitive token creation and deployment</li>
+                <li>Advanced vesting and distribution controls</li>
+                <li>Fair launch mechanisms with anti-bot protection</li>
+                <li>Integrated KYC and compliance tools</li>
+                <li>Real-time analytics and monitoring</li>
+              </ul>
+              <div className="flex gap-3 flex-wrap">
+                <a
+                  href="https://sol.dx.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="gh-btn gh-btn-primary flex items-center"
+                >
+                  <Globe size={16} className="mr-2" />
+                  Visit SOL.DX
+                </a>
+                <a
+                  href={EXTERNAL_LINKS.CALENDAR}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="gh-btn flex items-center"
+                >
+                  <Calendar size={16} className="mr-2" />
+                  {CTA_TEXT.BOOK_CALL_LEARN_MORE}
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <h2 className="text-xl font-semibold mb-6 mt-12 border-b border-border pb-2">
+          More Projects
+        </h2>
 
         <div className="mb-8 flex flex-wrap items-center gap-2">
           <div className="flex items-center mr-2">
@@ -221,61 +293,6 @@ const PortfolioPage: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.4 }}
-          className="mt-12 p-6 border border-border rounded-md bg-bg-primary"
-        >
-          <h2 className="text-xl font-semibold mb-4">
-            Featured Project: SOL.DX - Solana Token Launchpad
-          </h2>
-          <div className="md:flex">
-            <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
-              <img
-                src="/images/projects/sol-dx.png"
-                alt="SOL.DX - Solana Token Launchpad"
-                className="rounded-md w-full object-cover h-64"
-              />
-            </div>
-            <div className="md:w-1/2">
-              <p className="mb-4">
-                SOL.DX is our flagship token launchpad built specifically for
-                the Solana ecosystem. It provides project creators with powerful
-                tools to launch tokens with customizable tokenomics, vesting
-                schedules, and distribution mechanisms.
-              </p>
-              <ul className="list-disc list-inside mb-4 text-text-secondary">
-                <li>Intuitive token creation and deployment</li>
-                <li>Advanced vesting and distribution controls</li>
-                <li>Fair launch mechanisms with anti-bot protection</li>
-                <li>Integrated KYC and compliance tools</li>
-                <li>Real-time analytics and monitoring</li>
-              </ul>
-              <div className="flex gap-3">
-                <a
-                  href="https://sol.dx.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="gh-btn gh-btn-primary flex items-center"
-                >
-                  <Globe size={16} className="mr-2" />
-                  Visit SOL.DX
-                </a>
-                <a
-                  href={EXTERNAL_LINKS.CALENDAR}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="gh-btn flex items-center"
-                >
-                  <Calendar size={16} className="mr-2" />
-                  {CTA_TEXT.BOOK_CALL_LEARN_MORE}
-                </a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </Suspense>
 
       <Lightbox
