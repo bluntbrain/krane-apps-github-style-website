@@ -1,10 +1,18 @@
 import React, { Suspense, useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Filter } from "lucide-react";
+import {
+  Calendar,
+  Filter,
+  Star,
+  GitFork,
+  Award,
+  Github,
+  Globe,
+  ExternalLink,
+} from "lucide-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import MarkdownRenderer from "../components/ui/MarkdownRenderer";
-import RepoCard from "../components/ui/RepoCard";
 import SkeletonLoader from "../components/ui/SkeletonLoader";
 import { portfolioContent, portfolioProjects } from "../data/portfolioData";
 import { EXTERNAL_LINKS, CTA_TEXT } from "../constants";
@@ -74,14 +82,14 @@ const PortfolioPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="border border-border rounded-lg overflow-hidden"
+              className="border border-border rounded-lg overflow-hidden bg-bg-primary shadow-sm hover:shadow-md transition-shadow"
             >
               {project.imageUrl && (
                 <div
                   className="h-48 overflow-hidden cursor-pointer relative"
                   onClick={() => openLightbox(project.imageUrl || "")}
                 >
-                  <div className="absolute inset-0 bg-black/10 hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/10 hover:bg-black/30 transition-colors z-10 flex items-center justify-center opacity-0 hover:opacity-100">
                     <span className="text-white bg-black/50 px-3 py-1 rounded-md text-sm">
                       View Image
                     </span>
@@ -93,19 +101,122 @@ const PortfolioPage: React.FC = () => {
                   />
                 </div>
               )}
-              <div className="p-4">
-                <RepoCard
-                  title={project.title}
-                  description={project.description}
-                  language={project.language}
-                  stars={project.stars}
-                  forks={project.forks}
-                  tags={project.tags}
-                  links={project.links}
-                  achievement={project.achievement}
-                  prize={project.prize}
-                  category={project.category}
-                />
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  {project.title}
+                </h3>
+
+                {project.achievement && (
+                  <div className="mb-3 flex items-center text-success">
+                    <Award size={16} className="mr-1 text-success" />
+                    <span className="font-medium">{project.achievement}</span>
+                    {project.prize && (
+                      <span className="ml-1 font-bold">{project.prize}</span>
+                    )}
+                  </div>
+                )}
+
+                <p className="text-text-secondary mb-4">
+                  {project.description}
+                </p>
+
+                {project.tags && project.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 text-xs rounded-full bg-bg-secondary text-text-secondary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex items-center text-sm text-text-secondary mb-4">
+                  {project.language && (
+                    <div className="flex items-center mr-4">
+                      <span className="h-3 w-3 rounded-full bg-accent mr-1"></span>
+                      <span>{project.language}</span>
+                    </div>
+                  )}
+
+                  {project.stars > 0 && (
+                    <div className="flex items-center mr-4">
+                      <Star size={16} className="mr-1" />
+                      <span>{project.stars}</span>
+                    </div>
+                  )}
+
+                  {project.forks > 0 && (
+                    <div className="flex items-center">
+                      <GitFork size={16} className="mr-1" />
+                      <span>{project.forks}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.links?.github && (
+                    <a
+                      href={project.links.github}
+                      className="inline-flex items-center px-3 py-1 text-sm rounded-md bg-bg-secondary hover:bg-accent hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={14} className="mr-1" />
+                      GitHub
+                    </a>
+                  )}
+
+                  {project.links?.live && (
+                    <a
+                      href={project.links.live}
+                      className="inline-flex items-center px-3 py-1 text-sm rounded-md bg-bg-secondary hover:bg-accent hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Globe size={14} className="mr-1" />
+                      Live Site
+                    </a>
+                  )}
+
+                  {project.links?.ethglobal && (
+                    <a
+                      href={project.links.ethglobal}
+                      className="inline-flex items-center px-3 py-1 text-sm rounded-md bg-bg-secondary hover:bg-accent hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={14} className="mr-1" />
+                      ETHGlobal
+                    </a>
+                  )}
+
+                  {project.links?.chrome && (
+                    <a
+                      href={project.links.chrome}
+                      className="inline-flex items-center px-3 py-1 text-sm rounded-md bg-bg-secondary hover:bg-accent hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={14} className="mr-1" />
+                      Chrome Store
+                    </a>
+                  )}
+
+                  {project.links?.docs && (
+                    <a
+                      href={project.links.docs}
+                      className="inline-flex items-center px-3 py-1 text-sm rounded-md bg-bg-secondary hover:bg-accent hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={14} className="mr-1" />
+                      Documentation
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
