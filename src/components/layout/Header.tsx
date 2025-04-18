@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Code2, Menu, Moon, Sun, X, Calendar } from "lucide-react";
+import { Menu, Moon, Sun, X, Calendar } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
@@ -14,7 +14,12 @@ const Header: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Code2 className="h-8 w-8 text-accent" />
+              <img
+                src="/images/logo.png"
+                alt="Krane Apps Logo"
+                className="h-12 w-auto object-contain"
+                style={{ margin: "-8px" }}
+              />
               <span className="ml-2 text-xl font-bold">Krane Apps</span>
             </Link>
           </div>

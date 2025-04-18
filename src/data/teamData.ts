@@ -1,72 +1,81 @@
 export const teamMembers = [
   {
     id: 1,
-    name: 'Alex Chen',
-    role: 'Founder & CEO',
-    avatar: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'Former CTO at a fintech startup with 12+ years of experience building scalable applications. Blockchain enthusiast since 2013.',
+    name: 'Ishan Lakhwani',
+    role: 'Lead Developer',
+    avatar: '/images/team/ishan.jpg',
+    bio: 'Blockchain and front-end specialist with over 5 years of experience in the Web3 space. Expert in React, Next.js, and smart contract development.',
     social: {
-      github: 'https://github.com',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
+      github: 'https://github.com/bluntbrain',
+      twitter: 'https://x.com/bluntbrain_web3',
+      linkedin: 'https://www.linkedin.com/in/ishanl/',
     },
   },
   {
     id: 2,
-    name: 'Sarah Johnson',
-    role: 'Lead Blockchain Developer',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'Solidity expert with experience developing smart contracts for DeFi protocols. Contributor to multiple open-source blockchain projects.',
+    name: 'Lavish Badlani',
+    role: 'Back-end & Blockchain Developer',
+    avatar: '/images/team/lavish.jpg',
+    bio: 'Expert back-end engineer specializing in server architecture and blockchain development. Skilled in building robust and scalable solutions.',
     social: {
-      github: 'https://github.com',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
+      github: 'https://github.com/LovishB',
+      twitter: 'https://x.com/BadlaniLovish',
+      linkedin: 'https://www.linkedin.com/in/lovish-badlani-250a05151/',
     },
   },
   {
     id: 3,
-    name: 'Michael Rodriguez',
-    role: 'Frontend Lead',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'React specialist with a passion for creating intuitive user interfaces. Previously worked on products with millions of monthly active users.',
+    name: 'Sparsh Agrawal',
+    role: 'Senior Product Manager',
+    avatar: 'https://ui-avatars.com/api/?name=Sparsh+Agrawal',
+    bio: 'Strategic product leader with extensive experience bridging business goals and technical execution. Expertise in roadmap planning, user experience optimization, and driving product strategy from conception to launch.',
     social: {
-      github: 'https://github.com',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
+      github: 'https://github.com/sparsh-agarwal',
+      linkedin: 'https://www.linkedin.com/in/sparshagarwal/',
     },
   },
   {
     id: 4,
-    name: 'Priya Patel',
-    role: 'Backend Engineer',
-    avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'System architecture expert specializing in distributed systems and API design. Has scaled applications to handle millions of requests per day.',
+    name: 'Priyanshu Agarwal',
+    role: 'Senior Blockchain Developer',
+    avatar: '/images/team/priyanshu.jpg',
+    bio: 'Experienced blockchain developer with deep expertise in smart contract development, DeFi protocols, and Web3 technologies.',
     social: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
+      github: 'https://github.com/priyanshuagarwal',
+      linkedin: 'https://linkedin.com/in/priyanshuagarwal',
     },
   },
   {
     id: 5,
-    name: 'David Kim',
-    role: 'Product Manager',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'Strategic product thinker who has helped numerous startups go from concept to market. Strong background in user research and product analytics.',
+    name: 'Siddhant Lodha',
+    role: 'Senior Front-end Developer (Freelancer)',
+    avatar: 'https://ui-avatars.com/api/?name=Siddhant+Lodha',
+    bio: 'Senior front-end engineer with expertise in creating intuitive and responsive user interfaces using React, TypeScript, and modern web technologies.',
     social: {
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
+      github: 'https://github.com/Cydd7',
+      linkedin: 'https://www.linkedin.com/in/siddhantlodha/',
     },
   },
   {
     id: 6,
-    name: 'Emma Wilson',
-    role: 'UI/UX Designer',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-    bio: 'Creative designer with a data-driven approach to user experience. Specializes in creating clean, accessible interfaces for complex applications.',
+    name: 'Arnav Sharma',
+    role: 'UI/UX & Graphic Designer',
+    avatar: 'https://ui-avatars.com/api/?name=Arnav+Kumar',
+    bio: 'Creative graphic designer and UI/UX specialist focusing on creating visually appealing interfaces that deliver exceptional user experiences.',
     social: {
-      github: 'https://github.com',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://linkedin.com',
+      behance: 'https://www.behance.net/arnavsharma3',
+      linkedin: 'https://www.linkedin.com/in/arnavsharma22/',
+    },
+  },
+  {
+    id: 7,
+    name: 'Sharadindu Paul',
+    role: 'React Native Developer (Freelancer)',
+    avatar: 'https://ui-avatars.com/api/?name=Sharadindu+Paul',
+    bio: 'Full stack developer with expertise in React Native mobile app development. Specializes in building cross-platform applications with seamless user experiences.',
+    social: {
+      github: 'https://github.com/SharadinduPaul',
+      linkedin: 'https://www.linkedin.com/in/sharadindu-paul/',
     },
   },
 ];
@@ -76,7 +85,7 @@ export const teamContent = `
 
 At Krane Apps, our strength lies in our diverse team of experts. Each member brings unique skills and perspectives, united by a shared passion for building impactful technology solutions.
 
-## Leadership & Expertise
+## Expertise & Collaboration
 
-Our team consists of experienced professionals with backgrounds in blockchain development, software engineering, product management, and UI/UX design. We're committed to staying at the forefront of technology while delivering exceptional value to our clients.
+Our team consists of experienced professionals with specialized skills in blockchain development, front-end engineering, back-end architecture, and UI/UX design. We collaborate closely to deliver exceptional products that meet the highest standards of quality and innovation.
 `;

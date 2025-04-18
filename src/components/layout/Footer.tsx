@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Code2, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { EXTERNAL_LINKS } from "../../constants";
 
 const Footer: React.FC = () => {
@@ -9,7 +9,12 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex items-center">
-            <Code2 className="h-6 w-6 text-accent" />
+            <img
+              src="/images/logo.png"
+              alt="Krane Apps Logo"
+              className="h-10 w-auto object-contain"
+              style={{ margin: "-6px" }}
+            />
             <span className="ml-2 text-lg font-semibold">Krane Apps</span>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
@@ -62,6 +67,18 @@ const Footer: React.FC = () => {
           </div>
           <p className="mt-8 text-base text-text-secondary md:mt-0 md:order-1">
             &copy; {new Date().getFullYear()} Krane Apps. All rights reserved.
+          </p>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-border">
+          <p className="text-sm text-text-secondary text-center md:text-left">
+            Krane Apps is a venture by{" "}
+            <span className="font-medium">
+              LAKHWANI INNOVATION LABS PRIVATE LIMITED
+            </span>
+          </p>
+          <p className="text-xs text-text-secondary mt-1 text-center md:text-left">
+            C/O NARAINDAS JAISINGHANI, C-48, VAISHALI NAGAR, AJMER
           </p>
         </div>
       </div>

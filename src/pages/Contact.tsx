@@ -90,8 +90,6 @@ const ContactPage: React.FC = () => {
                   <div>
                     <p className="font-medium">Office</p>
                     <p className="text-text-secondary">
-                      {CONTACT_INFO.ADDRESS.STREET}
-                      <br />
                       {CONTACT_INFO.ADDRESS.CITY}, {CONTACT_INFO.ADDRESS.STATE}{" "}
                       {CONTACT_INFO.ADDRESS.ZIP}
                       <br />
@@ -109,19 +107,6 @@ const ContactPage: React.FC = () => {
                       className="text-accent hover:underline"
                     >
                       {CONTACT_INFO.EMAIL}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <Phone className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Phone</p>
-                    <a
-                      href={`tel:${CONTACT_INFO.PHONE}`}
-                      className="text-accent hover:underline"
-                    >
-                      {CONTACT_INFO.PHONE}
                     </a>
                   </div>
                 </div>

@@ -11,17 +11,17 @@ export const EXTERNAL_LINKS = {
 
 // Contact information
 export const CONTACT_INFO = {
-  EMAIL: "info@kraneapps.com",
+  EMAIL: "hello@kraneapps.com",
   PHONE: "+1 (415) 555-1234",
   ADDRESS: {
     STREET: "123 Tech Hub Street",
-    CITY: "San Francisco",
-    STATE: "CA",
-    ZIP: "94107",
-    COUNTRY: "United States",
+    CITY: "Bangalore",
+    STATE: "Karnataka",
+    ZIP: "560001",
+    COUNTRY: "India",
   },
   BUSINESS_HOURS: {
-    WEEKDAYS: "9:00 AM - 6:00 PM PST",
+    WEEKDAYS: "9:00 AM - 6:00 PM IST",
     WEEKENDS: "Closed",
   },
 };

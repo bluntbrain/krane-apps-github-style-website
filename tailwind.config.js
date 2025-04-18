@@ -18,7 +18,44 @@ export default {
       spacing: {
         '88': '22rem',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: 'rgb(var(--color-text-primary))',
+            a: {
+              color: 'rgb(var(--color-accent))',
+              '&:hover': {
+                color: 'rgb(var(--color-accent) / 0.8)',
+              },
+            },
+            h1: {
+              color: 'rgb(var(--color-text-primary))',
+            },
+            h2: {
+              color: 'rgb(var(--color-text-primary))',
+            },
+            h3: {
+              color: 'rgb(var(--color-text-primary))',
+            },
+            h4: {
+              color: 'rgb(var(--color-text-primary))',
+            },
+            strong: {
+              color: 'rgb(var(--color-accent))',
+            },
+            code: {
+              color: 'rgb(var(--color-text-primary))',
+            },
+            blockquote: {
+              color: 'rgb(var(--color-text-secondary))',
+              borderLeftColor: 'rgb(var(--color-border))',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

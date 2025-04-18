@@ -1,0 +1,17 @@
+# Team Member Images Directory
+
+This directory should contain the following image files for team members:
+
+1. ishan.jpg - Ishan Lakhwani (Lead Developer)
+2. lavish.jpg - Lavish Badlani (Back-end & Blockchain Developer)
+3. priyanshu.jpg - Priyanshu Agarwal (Senior Blockchain Developer)
+4. siddhant.jpg - Siddhant Lodha (Senior Front-end Developer)
+5. arnav.jpg - Arnav (UI/UX & Graphic Designer)
+6. sharadindu.jpg - Sharadindu Paul (Full Stack & React Native Developer)
+
+Please add square images with dimensions of at least 500x500 pixels for optimal display.
+Until proper images are added, the team member cards may display broken image links.
+
+To use placeholder images temporarily, you can use services like:
+- https://ui-avatars.com/api/?name=Ishan+Lakhwani (replace with team member names)
+- https://randomuser.me/api/portraits/men/1.jpg (replace number for different images) 
