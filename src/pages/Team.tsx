@@ -5,10 +5,9 @@ import MarkdownRenderer from "../components/ui/MarkdownRenderer";
 import TeamMemberCard from "../components/ui/TeamMemberCard";
 import SkeletonLoader from "../components/ui/SkeletonLoader";
 import { teamContent, teamMembers } from "../data/teamData";
+import { EXTERNAL_LINKS, CTA_TEXT } from "../constants";
 
 const TeamPage: React.FC = () => {
-  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -54,13 +53,13 @@ const TeamPage: React.FC = () => {
           </p>
           <div className="flex">
             <a
-              href={calendlyLink}
+              href={EXTERNAL_LINKS.CALENDAR}
               target="_blank"
               rel="noreferrer"
               className="gh-btn gh-btn-primary flex items-center"
             >
               <Calendar size={16} className="mr-2" />
-              Book a Call to Discuss Opportunities
+              {CTA_TEXT.BOOK_CALL_OPPORTUNITIES}
             </a>
           </div>
         </motion.div>

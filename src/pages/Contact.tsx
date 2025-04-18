@@ -2,10 +2,9 @@ import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Calendar } from "lucide-react";
 import SkeletonLoader from "../components/ui/SkeletonLoader";
+import { EXTERNAL_LINKS, CONTACT_INFO, CTA_TEXT } from "../constants";
 
 const ContactPage: React.FC = () => {
-  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,7 +41,7 @@ const ContactPage: React.FC = () => {
               </p>
 
               <motion.a
-                href={calendlyLink}
+                href={EXTERNAL_LINKS.CALENDAR}
                 target="_blank"
                 rel="noreferrer"
                 className="gh-btn gh-btn-primary flex items-center justify-center w-full md:w-auto"
@@ -50,7 +49,7 @@ const ContactPage: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Calendar size={18} className="mr-2" />
-                <span>Book a Call Now</span>
+                <span>{CTA_TEXT.BOOK_CALL}</span>
               </motion.a>
             </motion.div>
 
@@ -91,11 +90,12 @@ const ContactPage: React.FC = () => {
                   <div>
                     <p className="font-medium">Office</p>
                     <p className="text-text-secondary">
-                      123 Tech Hub Street
+                      {CONTACT_INFO.ADDRESS.STREET}
                       <br />
-                      San Francisco, CA 94107
+                      {CONTACT_INFO.ADDRESS.CITY}, {CONTACT_INFO.ADDRESS.STATE}{" "}
+                      {CONTACT_INFO.ADDRESS.ZIP}
                       <br />
-                      United States
+                      {CONTACT_INFO.ADDRESS.COUNTRY}
                     </p>
                   </div>
                 </div>
@@ -105,10 +105,10 @@ const ContactPage: React.FC = () => {
                   <div>
                     <p className="font-medium">Email</p>
                     <a
-                      href="mailto:info@kraneapps.com"
+                      href={`mailto:${CONTACT_INFO.EMAIL}`}
                       className="text-accent hover:underline"
                     >
-                      info@kraneapps.com
+                      {CONTACT_INFO.EMAIL}
                     </a>
                   </div>
                 </div>
@@ -118,10 +118,10 @@ const ContactPage: React.FC = () => {
                   <div>
                     <p className="font-medium">Phone</p>
                     <a
-                      href="tel:+14155551234"
+                      href={`tel:${CONTACT_INFO.PHONE}`}
                       className="text-accent hover:underline"
                     >
-                      +1 (415) 555-1234
+                      {CONTACT_INFO.PHONE}
                     </a>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <p className="font-medium">Book a Call</p>
                     <a
-                      href={calendlyLink}
+                      href={EXTERNAL_LINKS.CALENDAR}
                       target="_blank"
                       rel="noreferrer"
                       className="text-accent hover:underline"
@@ -145,9 +145,11 @@ const ContactPage: React.FC = () => {
               <div className="mt-6 pt-6 border-t border-border">
                 <h3 className="text-lg font-medium mb-4">Business Hours</h3>
                 <p className="text-text-secondary mb-2">
-                  Monday - Friday: 9:00 AM - 6:00 PM PST
+                  Monday - Friday: {CONTACT_INFO.BUSINESS_HOURS.WEEKDAYS}
                 </p>
-                <p className="text-text-secondary">Saturday - Sunday: Closed</p>
+                <p className="text-text-secondary">
+                  Saturday - Sunday: {CONTACT_INFO.BUSINESS_HOURS.WEEKENDS}
+                </p>
               </div>
             </div>
           </motion.div>

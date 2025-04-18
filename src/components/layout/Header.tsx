@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Code2, Menu, Moon, Sun, X, Calendar } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
+import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
 
   return (
     <header className="bg-bg-secondary border-b border-border sticky top-0 z-50">
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <a
-              href="https://github.com/Krane-Apps"
+              href={EXTERNAL_LINKS.GITHUB}
               target="_blank"
               rel="noopener noreferrer"
               className="gh-btn"
@@ -40,13 +40,13 @@ const Header: React.FC = () => {
               GitHub
             </a>
             <a
-              href={calendlyLink}
+              href={EXTERNAL_LINKS.CALENDAR}
               target="_blank"
               rel="noopener noreferrer"
               className="gh-btn gh-btn-primary flex items-center"
             >
               <Calendar size={16} className="mr-2" />
-              Book a Call
+              {CTA_TEXT.BOOK_CALL}
             </a>
           </div>
 
@@ -101,7 +101,7 @@ const Header: React.FC = () => {
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
               <a
-                href="https://github.com/Krane-Apps"
+                href={EXTERNAL_LINKS.GITHUB}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gh-btn"
@@ -109,13 +109,13 @@ const Header: React.FC = () => {
                 GitHub
               </a>
               <a
-                href={calendlyLink}
+                href={EXTERNAL_LINKS.CALENDAR}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gh-btn gh-btn-primary flex items-center"
               >
                 <Calendar size={16} className="mr-2" />
-                Book a Call
+                {CTA_TEXT.BOOK_CALL}
               </a>
             </div>
           </div>

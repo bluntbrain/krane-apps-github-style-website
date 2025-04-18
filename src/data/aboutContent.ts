@@ -1,3 +1,5 @@
+import { EXTERNAL_LINKS, CTA_TEXT } from "../constants";
+
 export const aboutContent = `
 # About Krane Apps
 
@@ -46,5 +48,5 @@ We create tailored software solutions that address specific business challenges.
 - **Transparent Communication**: We maintain clear, consistent communication throughout the project lifecycle.
 - **Long-term Partnership**: We aim to build lasting relationships, supporting your growth journey.
 
-Ready to transform your idea into reality? [Book a call with our team](https://calendar.app.google/vRgL3k468QSNGJX39) to start the conversation.
+Ready to transform your idea into reality? [${CTA_TEXT.BOOK_CALL_START}](${EXTERNAL_LINKS.CALENDAR}) to start the conversation.
 `;

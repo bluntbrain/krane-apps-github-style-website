@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Code2, Github, Twitter, Linkedin } from "lucide-react";
+import { Code2, Github, Linkedin } from "lucide-react";
+import { EXTERNAL_LINKS } from "../../constants";
 
 const Footer: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a
-              href="https://github.com/Krane-Apps"
+              href={EXTERNAL_LINKS.GITHUB}
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary"
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/company/kraneapps/"
+              href={EXTERNAL_LINKS.LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary"

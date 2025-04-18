@@ -5,10 +5,9 @@ import MarkdownRenderer from "../components/ui/MarkdownRenderer";
 import RepoCard from "../components/ui/RepoCard";
 import SkeletonLoader from "../components/ui/SkeletonLoader";
 import { portfolioContent, portfolioProjects } from "../data/portfolioData";
+import { EXTERNAL_LINKS, CTA_TEXT } from "../constants";
 
 const PortfolioPage: React.FC = () => {
-  const calendlyLink = "https://calendar.app.google/vRgL3k468QSNGJX39";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -77,14 +76,14 @@ const PortfolioPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href={calendlyLink}
+                href={EXTERNAL_LINKS.CALENDAR}
                 target="_blank"
                 rel="noreferrer"
                 className="gh-btn gh-btn-primary flex items-center"
                 style={{ width: "fit-content" }}
               >
                 <Calendar size={16} className="mr-2" />
-                Book a Call to Learn More
+                {CTA_TEXT.BOOK_CALL_LEARN_MORE}
               </a>
             </div>
           </div>
