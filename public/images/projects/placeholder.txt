@@ -1,6 +1,8 @@
 This directory is for project images.
 
 Expected image files:
+- sol-dx.png (Solana token launchpad)
+- dx-fun.png (Multi-chain EVM token launchpad)
 - chain-monsters.png
 - repo-rewards.png
 - zk-credit-score.png

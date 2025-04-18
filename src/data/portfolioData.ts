@@ -1,6 +1,36 @@
 export const portfolioProjects = [
   {
     id: 1,
+    title: 'SOL.DX',
+    description: 'A powerful token launchpad built specifically for the Solana ecosystem. Enables projects to launch tokens with customizable tokenomics, vesting schedules, and distribution mechanisms.',
+    language: 'Rust',
+    stars: 87,
+    forks: 29,
+    tags: ['Solana', 'Launchpad', 'Token'],
+    links: {
+      live: 'https://sol.dx.app/',
+      github: 'https://github.com/bluntbrain/sol-dx'
+    },
+    category: 'blockchain',
+    imageUrl: '/images/projects/sol-dx.png',
+  },
+  {
+    id: 2,
+    title: 'DX.fun',
+    description: 'Multi-chain token launchpad supporting Ethereum, Base, Polygon, and BNB Chain. Features comprehensive tokenomics tools, fair launch mechanisms, and liquidity management.',
+    language: 'Solidity',
+    stars: 76,
+    forks: 24,
+    tags: ['Multi-chain', 'Launchpad', 'DeFi'],
+    links: {
+      live: 'https://www.dx.fun/',
+      github: 'https://github.com/bluntbrain/dx-fun'
+    },
+    category: 'blockchain',
+    imageUrl: '/images/projects/dx-fun.png',
+  },
+  {
+    id: 3,
     title: 'Chain Monsters',
     description: 'A turn-based RPG action game on the blockchain where players control monsters, engage in PvP battles, strategically move on a 5x8 grid, attacking enemies to increase mana and decrease opponents health.',
     language: 'Solidity',
@@ -18,7 +48,7 @@ export const portfolioProjects = [
     imageUrl: '/images/projects/chain-monsters.png',
   },
   {
-    id: 2,
+    id: 4,
     title: 'RepoRewards',
     description: 'A blockchain-based platform designed to make rewarding open-source contributions on GitHub super easy and transparent. Built on Base, Ethereum and several EVM chains.',
     language: 'Solidity',
@@ -36,7 +66,7 @@ export const portfolioProjects = [
     imageUrl: '/images/projects/repo-rewards.png',
   },
   {
-    id: 3,
+    id: 5,
     title: 'ZK Credit Score',
     description: 'A blockchain-based credit scoring system that revolutionizes DeFi by enabling on-chain creditworthiness with zero-knowledge proofs. It analyzes cross-chain wallet activity to verify token balances privately.',
     language: 'TypeScript',
@@ -54,7 +84,7 @@ export const portfolioProjects = [
     imageUrl: '/images/projects/zk-credit-score.png',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Inspector AI',
     description: 'A Chrome extension that analyzes smart contracts to make web3 more secure using AI. It provides risk assessments, integrates market data, and includes community reviews for safer blockchain interactions.',
     language: 'JavaScript',
@@ -70,7 +100,7 @@ export const portfolioProjects = [
     imageUrl: '/images/projects/inspector-ai.png',
   },
   {
-    id: 5,
+    id: 7,
     title: 'Aegis Agent',
     description: 'An AI-driven agent that monitors transactions 24/7, detects anomalies, and triggers alerts/emergency actions to protect users from potential blockchain security threats.',
     language: 'TypeScript',
@@ -85,7 +115,7 @@ export const portfolioProjects = [
     imageUrl: '/images/projects/aegis-agent.png',
   },
   {
-    id: 6,
+    id: 8,
     title: 'MulTEEverse',
     description: 'A Trust-Weighted Consensus Mechanism for Multi-TEE Distributed network. A "Proof of Attestation" system for secure and trusted computation in decentralized environments.',
     language: 'Rust',

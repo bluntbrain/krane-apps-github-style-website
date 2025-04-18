@@ -229,40 +229,50 @@ const PortfolioPage: React.FC = () => {
           className="mt-12 p-6 border border-border rounded-md bg-bg-primary"
         >
           <h2 className="text-xl font-semibold mb-4">
-            Need a Custom Blockchain, Mobile or Web Solution?
+            Featured Project: SOL.DX - Solana Token Launchpad
           </h2>
           <div className="md:flex">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <img
-                src="/images/projects/featured-image.png"
-                alt="Featured Project"
+                src="/images/projects/sol-dx.png"
+                alt="SOL.DX - Solana Token Launchpad"
                 className="rounded-md w-full object-cover h-64"
               />
             </div>
             <div className="md:w-1/2">
               <p className="mb-4">
-                Our team of expert developers can help bring your ideas to life.
-                Whether you need a blockchain application, mobile app, or
-                full-stack web solution, we have the expertise to deliver
-                high-quality results.
+                SOL.DX is our flagship token launchpad built specifically for
+                the Solana ecosystem. It provides project creators with powerful
+                tools to launch tokens with customizable tokenomics, vesting
+                schedules, and distribution mechanisms.
               </p>
               <ul className="list-disc list-inside mb-4 text-text-secondary">
-                <li>Award-winning blockchain development</li>
-                <li>Cross-platform mobile apps with React Native</li>
-                <li>Modern web applications with React and Next.js</li>
-                <li>Full-stack development with secure backends</li>
-                <li>Comprehensive support and maintenance</li>
+                <li>Intuitive token creation and deployment</li>
+                <li>Advanced vesting and distribution controls</li>
+                <li>Fair launch mechanisms with anti-bot protection</li>
+                <li>Integrated KYC and compliance tools</li>
+                <li>Real-time analytics and monitoring</li>
               </ul>
-              <a
-                href={EXTERNAL_LINKS.CALENDAR}
-                target="_blank"
-                rel="noreferrer"
-                className="gh-btn gh-btn-primary flex items-center"
-                style={{ width: "fit-content" }}
-              >
-                <Calendar size={16} className="mr-2" />
-                {CTA_TEXT.BOOK_CALL_LEARN_MORE}
-              </a>
+              <div className="flex gap-3">
+                <a
+                  href="https://sol.dx.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="gh-btn gh-btn-primary flex items-center"
+                >
+                  <Globe size={16} className="mr-2" />
+                  Visit SOL.DX
+                </a>
+                <a
+                  href={EXTERNAL_LINKS.CALENDAR}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="gh-btn flex items-center"
+                >
+                  <Calendar size={16} className="mr-2" />
+                  {CTA_TEXT.BOOK_CALL_LEARN_MORE}
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
