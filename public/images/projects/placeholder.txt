@@ -1,0 +1,12 @@
+This directory is for project images.
+
+Expected image files:
+- chain-monsters.png
+- repo-rewards.png
+- zk-credit-score.png
+- inspector-ai.png
+- aegis-agent.png
+- multeverse.png
+- featured-image.png
+
+Images should ideally be 16:9 ratio, minimum 800x450px for best display quality.

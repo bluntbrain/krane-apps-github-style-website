@@ -234,7 +234,7 @@ const PortfolioPage: React.FC = () => {
           <div className="md:flex">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
               <img
-                src={portfolioProjects[0].imageUrl}
+                src="/images/projects/featured-image.png"
                 alt="Featured Project"
                 className="rounded-md w-full object-cover h-64"
               />

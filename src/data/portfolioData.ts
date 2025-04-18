@@ -15,7 +15,7 @@ export const portfolioProjects = [
     achievement: 'StarkHack Winner 🏆 March 2024',
     prize: '$4,000',
     category: 'blockchain',
-    imageUrl: 'https://images.unsplash.com/photo-1642415799357-5667d03004eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/chain-monsters.png',
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const portfolioProjects = [
     achievement: 'SuperHack Winner 🚀 February 2024',
     prize: '$10,000',
     category: 'blockchain',
-    imageUrl: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/repo-rewards.png',
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const portfolioProjects = [
     achievement: 'ETH Bangkok Winner 🏆 December 2023',
     prize: '$2,000',
     category: 'blockchain',
-    imageUrl: 'https://images.unsplash.com/photo-1621579429208-bdb2d07d2edf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/zk-credit-score.png',
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const portfolioProjects = [
       chrome: 'https://chrome.google.com/webstore'
     },
     category: 'web',
-    imageUrl: 'https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/inspector-ai.png',
   },
   {
     id: 5,
@@ -82,7 +82,7 @@ export const portfolioProjects = [
       live: 'https://aegisagent.io'
     },
     category: 'web',
-    imageUrl: 'https://images.unsplash.com/photo-1639762681666-e0cfbcf94f8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/aegis-agent.png',
   },
   {
     id: 6,
@@ -97,7 +97,7 @@ export const portfolioProjects = [
       docs: 'https://docs.multeverse.dev'
     },
     category: 'blockchain',
-    imageUrl: 'https://images.unsplash.com/photo-1637846099930-86f17d9934c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80',
+    imageUrl: '/images/projects/multeverse.png',
   },
 ];
 
