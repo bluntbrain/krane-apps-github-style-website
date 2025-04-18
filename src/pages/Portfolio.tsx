@@ -51,7 +51,7 @@ const PortfolioPage: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="p-6 md:p-8"
+      className="p-3 sm:p-4 md:p-6"
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
         <MarkdownRenderer content={portfolioContent} />

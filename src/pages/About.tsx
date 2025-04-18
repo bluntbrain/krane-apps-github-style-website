@@ -34,35 +34,37 @@ const AboutPage: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="p-6 md:p-8"
+      className="p-3 sm:p-4 md:p-6"
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
         {/* Hero section with highlights */}
-        <div className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <div className="mb-8">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-center">
             We Build <span className="text-accent">Exceptional</span> Software
           </h1>
-          <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
+          <p className="text-center text-base sm:text-lg mb-6 max-w-3xl mx-auto">
             Specializing in MVPs for startups and blockchain projects, helping
             innovators turn their ideas into reality.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8">
             {aboutHighlights.map((highlight, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-bg-primary p-6 rounded-lg border border-border flex flex-col items-center text-center"
+                className="bg-bg-primary p-3 sm:p-4 md:p-6 rounded-lg border border-border flex flex-col items-center text-center"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-3 sm:mb-4">
                   {iconMap[highlight.iconName]}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
                   {highlight.title}
                 </h3>
-                <p className="text-text-secondary">{highlight.description}</p>
+                <p className="text-text-secondary text-sm sm:text-base">
+                  {highlight.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -73,22 +75,25 @@ const AboutPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mb-12 bg-bg-primary p-6 rounded-lg border border-border"
+          className="mb-8 bg-bg-primary p-3 sm:p-4 md:p-6 rounded-lg border border-border"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-center">
             Our Technology Stack
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
             {techStack.map((category, index) => (
-              <div key={index} className="mb-4">
-                <h3 className="text-lg font-medium mb-3 text-accent">
+              <div key={index} className="mb-3 sm:mb-4">
+                <h3 className="text-base sm:text-lg font-medium mb-2 text-accent">
                   {category.name}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-1 sm:space-y-2">
                   {category.technologies.map((tech, techIndex) => (
                     <li key={techIndex} className="flex items-center">
-                      <Code size={14} className="mr-2 text-text-secondary" />
-                      <span>{tech}</span>
+                      <Code
+                        size={14}
+                        className="mr-1.5 sm:mr-2 text-text-secondary"
+                      />
+                      <span className="text-sm sm:text-base">{tech}</span>
                     </li>
                   ))}
                 </ul>
@@ -98,7 +103,7 @@ const AboutPage: React.FC = () => {
         </motion.div>
 
         {/* Main content */}
-        <div className="prose prose-invert max-w-none">
+        <div className="prose prose-invert max-w-none text-sm sm:text-base">
           <MarkdownRenderer content={aboutContent} />
         </div>
 
@@ -107,12 +112,12 @@ const AboutPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mt-12 p-8 border border-accent/30 rounded-lg bg-bg-primary text-center"
+          className="mt-8 p-4 sm:p-6 md:p-8 border border-accent/30 rounded-lg bg-bg-primary text-center"
         >
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
             Ready to Transform Your Idea Into Reality?
           </h2>
-          <p className="mb-6 max-w-2xl mx-auto">
+          <p className="mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
             Let's discuss how we can help bring your vision to life with our
             technical expertise and business acumen.
           </p>
@@ -120,9 +125,9 @@ const AboutPage: React.FC = () => {
             href={EXTERNAL_LINKS.CALENDAR}
             target="_blank"
             rel="noreferrer"
-            className="gh-btn gh-btn-primary inline-flex items-center px-6 py-3"
+            className="gh-btn gh-btn-primary inline-flex items-center px-4 sm:px-6 py-2 sm:py-3"
           >
-            <Calendar size={18} className="mr-2" />
+            <Calendar size={16} className="mr-2" />
             {CTA_TEXT.BOOK_CALL_START}
           </a>
         </motion.div>

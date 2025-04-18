@@ -11,16 +11,16 @@ const ContactPage: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="p-6 md:p-8"
+      className="p-3 sm:p-4 md:p-6"
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
-        <h1 className="text-2xl font-semibold mb-6 pb-2 border-b border-border">
+        <h1 className="text-xl sm:text-2xl font-semibold mb-4 pb-2 border-b border-border">
           Contact Us
         </h1>
 
-        <div className="md:flex md:gap-8">
+        <div className="md:flex md:gap-6 lg:gap-8">
           <div className="md:w-2/3">
-            <p className="mb-6">
+            <p className="mb-4 sm:mb-6">
               Have a project in mind or want to learn more about our services?
               Book a call with our team and let's discuss how we can help bring
               your ideas to life.
@@ -30,12 +30,12 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-bg-primary p-8 rounded-md border border-border mb-6"
+              className="bg-bg-primary p-4 sm:p-6 rounded-md border border-border mb-4 sm:mb-6"
             >
-              <h2 className="text-xl font-medium mb-4">
+              <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
                 Schedule a Consultation
               </h2>
-              <p className="mb-6">
+              <p className="mb-4 sm:mb-6">
                 Our team is ready to discuss your project needs and provide
                 expert guidance on how to achieve your goals.
               </p>
@@ -57,12 +57,12 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mt-8"
+              className="mt-6"
             >
-              <h3 className="text-lg font-medium mb-4">
+              <h3 className="text-base sm:text-lg font-medium mb-3">
                 Why Book a Call With Us?
               </h3>
-              <ul className="list-disc pl-5 space-y-2">
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2">
                 <li>Discuss your project requirements in detail</li>
                 <li>
                   Get expert advice on technology stack and implementation
@@ -79,14 +79,16 @@ const ContactPage: React.FC = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
-            className="md:w-1/3 mt-8 md:mt-0"
+            className="md:w-1/3 mt-6 md:mt-0"
           >
-            <div className="bg-bg-primary p-6 rounded-md border border-border">
-              <h3 className="text-lg font-medium mb-4">Contact Information</h3>
+            <div className="bg-bg-primary p-3 sm:p-4 md:p-6 rounded-md border border-border">
+              <h3 className="text-base sm:text-lg font-medium mb-3">
+                Contact Information
+              </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <MapPin className="h-5 w-5 text-accent mt-0.5 mr-2 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Office</p>
                     <p className="text-text-secondary">
@@ -99,7 +101,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <Mail className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-accent mt-0.5 mr-2 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Email</p>
                     <a
@@ -112,7 +114,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <Calendar className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                  <Calendar className="h-5 w-5 text-accent mt-0.5 mr-2 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Book a Call</p>
                     <a
@@ -127,8 +129,10 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-6 border-t border-border">
-                <h3 className="text-lg font-medium mb-4">Business Hours</h3>
+              <div className="mt-4 pt-4 sm:mt-6 sm:pt-6 border-t border-border">
+                <h3 className="text-base sm:text-lg font-medium mb-3">
+                  Business Hours
+                </h3>
                 <p className="text-text-secondary mb-2">
                   Monday - Friday: {CONTACT_INFO.BUSINESS_HOURS.WEEKDAYS}
                 </p>

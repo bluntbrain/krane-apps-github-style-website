@@ -5,19 +5,20 @@ import { EXTERNAL_LINKS } from "../../constants";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-bg-secondary border-t border-border py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="md:flex md:items-center md:justify-between">
+    <footer className="bg-bg-secondary border-t border-border py-4 sm:py-6">
+      <div className="mx-auto px-0 sm:px-2 lg:px-4">
+        <div className="md:flex md:items-center md:justify-between px-3 sm:px-4">
           <div className="flex items-center">
             <img
               src="/images/logo.png"
               alt="Krane Apps Logo"
-              className="h-10 w-auto object-contain"
-              style={{ margin: "-6px" }}
+              className="h-7 sm:h-8 w-auto object-contain mr-1"
             />
-            <span className="ml-2 text-lg font-semibold">Krane Apps</span>
+            <span className="text-base sm:text-lg font-semibold">
+              Krane Apps
+            </span>
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-4 sm:space-x-6 mt-3 md:mt-0">
             <a
               href={EXTERNAL_LINKS.GITHUB}
               target="_blank"
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
               className="text-text-secondary hover:text-text-primary"
               aria-label="GitHub"
             >
-              <Github size={20} />
+              <Github size={18} />
             </a>
             <a
               href={EXTERNAL_LINKS.LINKEDIN}
@@ -34,44 +35,44 @@ const Footer: React.FC = () => {
               className="text-text-secondary hover:text-text-primary"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <Linkedin size={18} />
             </a>
           </div>
         </div>
-        <div className="mt-8 border-t border-border pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
+        <div className="mt-4 sm:mt-6 border-t border-border pt-4 sm:pt-6 md:flex md:items-center md:justify-between px-3 sm:px-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 md:order-2">
             <Link
               to="/about"
-              className="text-text-secondary hover:text-text-primary text-sm"
+              className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
             >
               About
             </Link>
             <Link
               to="/portfolio"
-              className="text-text-secondary hover:text-text-primary text-sm"
+              className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
             >
               Portfolio
             </Link>
             <Link
               to="/team"
-              className="text-text-secondary hover:text-text-primary text-sm"
+              className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
             >
               Team
             </Link>
             <Link
               to="/contact"
-              className="text-text-secondary hover:text-text-primary text-sm"
+              className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
             >
               Contact
             </Link>
           </div>
-          <p className="mt-8 text-base text-text-secondary md:mt-0 md:order-1">
+          <p className="mt-4 sm:mt-6 md:mt-0 md:order-1 text-sm sm:text-base text-text-secondary">
             &copy; {new Date().getFullYear()} Krane Apps. All rights reserved.
           </p>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-border">
-          <p className="text-sm text-text-secondary text-center md:text-left">
+        <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-border px-3 sm:px-4">
+          <p className="text-xs sm:text-sm text-text-secondary text-center md:text-left">
             Krane Apps is a venture by{" "}
             <span className="font-medium">
               LAKHWANI INNOVATION LABS PRIVATE LIMITED

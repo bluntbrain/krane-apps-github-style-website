@@ -14,12 +14,12 @@ const TeamPage: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className="p-6 md:p-8"
+      className="p-3 sm:p-4 md:p-6"
     >
       <Suspense fallback={<SkeletonLoader className="h-96" />}>
         <MarkdownRenderer content={teamContent} />
 
-        <div className="mt-8 space-y-6">
+        <div className="mt-6 space-y-4 sm:space-y-6">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.id}
@@ -42,9 +42,11 @@ const TeamPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4 }}
-          className="mt-12 p-6 border border-border rounded-md bg-bg-primary"
+          className="mt-8 p-3 sm:p-4 md:p-6 border border-border rounded-md bg-bg-primary"
         >
-          <h2 className="text-xl font-semibold mb-4">Join Our Team</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+            Join Our Team
+          </h2>
           <p className="mb-4">
             We're always looking for talented individuals who are passionate
             about technology and innovation. If you're interested in working
