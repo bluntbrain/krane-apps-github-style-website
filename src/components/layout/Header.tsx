@@ -91,6 +91,13 @@ const Header: React.FC = () => {
               Team
             </Link>
             <Link
+              to="/blog"
+              className="sidebar-nav-item py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
               to="/contact"
               className="sidebar-nav-item py-2"
               onClick={() => setMobileMenuOpen(false)}

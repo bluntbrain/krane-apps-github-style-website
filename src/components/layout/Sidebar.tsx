@@ -1,6 +1,13 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { BookOpen, Briefcase, Users, Mail, Calendar } from "lucide-react";
+import {
+  BookOpen,
+  Briefcase,
+  Users,
+  Mail,
+  Calendar,
+  FileText,
+} from "lucide-react";
 import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
 const Sidebar: React.FC = () => {
@@ -10,6 +17,7 @@ const Sidebar: React.FC = () => {
     { name: "About", path: "/about", icon: <BookOpen size={16} /> },
     { name: "Portfolio", path: "/portfolio", icon: <Briefcase size={16} /> },
     { name: "Team", path: "/team", icon: <Users size={16} /> },
+    { name: "Blog", path: "/blog", icon: <FileText size={16} /> },
     { name: "Contact", path: "/contact", icon: <Mail size={16} /> },
   ];
 

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-bg-secondary border-t border-border py-4 sm:py-6">
       <div className="mx-auto px-0 sm:px-2 lg:px-4">
-        <div className="md:flex md:items-center md:justify-between px-3 sm:px-4">
+        <div className="flex flex-row items-center justify-between px-3 sm:px-4">
           <div className="flex items-center">
             <img
               src="/images/logo.png"
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               Krane Apps
             </span>
           </div>
-          <div className="flex space-x-4 sm:space-x-6 mt-3 md:mt-0">
+          <div className="flex space-x-4 sm:space-x-6">
             <a
               href={EXTERNAL_LINKS.GITHUB}
               target="_blank"
@@ -58,6 +58,12 @@ const Footer: React.FC = () => {
               className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
             >
               Team
+            </Link>
+            <Link
+              to="/blog"
+              className="text-text-secondary hover:text-text-primary text-xs sm:text-sm"
+            >
+              Blog
             </Link>
             <Link
               to="/contact"

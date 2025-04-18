@@ -1,13 +1,21 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import Layout from './components/layout/Layout';
-import AboutPage from './pages/About';
-import PortfolioPage from './pages/Portfolio';
-import TeamPage from './pages/Team';
-import ContactPage from './pages/Contact';
-import NotFoundPage from './pages/NotFound';
-import { ThemeProvider } from './context/ThemeContext';
+import React from "react";
+import {
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+  PathRouteProps,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Layout from "./components/layout/Layout";
+import AboutPage from "./pages/About";
+import PortfolioPage from "./pages/Portfolio";
+import TeamPage from "./pages/Team";
+import ContactPage from "./pages/Contact";
+import BlogList from "./pages/BlogList";
+import BlogPostPage from "./pages/BlogPost";
+import NotFoundPage from "./pages/NotFound";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   const location = useLocation();
@@ -22,6 +30,12 @@ function App() {
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="team" element={<TeamPage />} />
             <Route path="contact" element={<ContactPage />} />
+
+            {/* Blog Routes */}
+            <Route path="blog" element={<BlogList />} />
+            <Route path="blog/:slug" element={<BlogPostPage />} />
+
+            {/* Fallback */}
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
@@ -29,5 +43,13 @@ function App() {
     </ThemeProvider>
   );
 }
+
+// Helper component to handle tag redirects
+const TagRedirectComponent: React.FC = () => {
+  const location = useLocation();
+  const tag = location.pathname.split("/").pop() || "";
+
+  return <Navigate to={`/blog?tag=${tag}`} replace />;
+};
 
 export default App;
