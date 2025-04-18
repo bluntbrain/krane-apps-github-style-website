@@ -104,18 +104,7 @@ export const portfolioProjects = [
 export const portfolioContent = `
 # Our Portfolio
 
-At Krane Apps, we specialize in three core areas: Blockchain Solutions, Mobile Applications, and Full-Stack Web Development. Our award-winning projects have been recognized in global hackathons and are used by thousands of users worldwide.
-
-## Expertise Areas
-
-### Blockchain Development
-We build innovative solutions on various blockchain networks including Ethereum, StarkNet, Base, and other EVM-compatible chains. Our expertise spans smart contracts, DeFi applications, gaming, and privacy-preserving technologies.
-
-### Mobile Applications
-Our React Native expertise allows us to deliver high-performance cross-platform mobile applications with native-like experiences for both iOS and Android platforms.
-
-### Web Applications
-Using React, Next.js, and robust backend technologies, we create scalable and responsive web applications that provide seamless user experiences.
+Our award-winning projects have been recognized in global hackathons and are used by thousands of users worldwide. 
 
 ## Featured Projects
 
