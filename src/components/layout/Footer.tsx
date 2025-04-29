@@ -84,9 +84,6 @@ const Footer: React.FC = () => {
               LAKHWANI INNOVATION LABS PRIVATE LIMITED
             </span>
           </p>
-          <p className="text-xs text-text-secondary mt-1 text-center md:text-left">
-            C/O NARAINDAS JAISINGHANI, C-48, VAISHALI NAGAR, AJMER
-          </p>
         </div>
       </div>
     </footer>
