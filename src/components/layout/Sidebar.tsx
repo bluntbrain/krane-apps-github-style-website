@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   BookOpen,
   Briefcase,
@@ -11,8 +11,6 @@ import {
 import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
 const Sidebar: React.FC = () => {
-  const location = useLocation();
-
   const navItems = [
     { name: "About", path: "/about", icon: <BookOpen size={16} /> },
     { name: "Portfolio", path: "/portfolio", icon: <Briefcase size={16} /> },

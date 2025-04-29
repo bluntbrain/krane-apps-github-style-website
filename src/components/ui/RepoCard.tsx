@@ -40,7 +40,6 @@ const RepoCard: React.FC<RepoCardProps> = ({
   tags = [],
   achievement,
   prize,
-  category,
 }) => {
   return (
     <div className="repo-card">

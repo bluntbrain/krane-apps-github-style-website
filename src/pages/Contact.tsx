@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Calendar } from "lucide-react";
+import { Mail, MapPin, Calendar } from "lucide-react";
 import SkeletonLoader from "../components/ui/SkeletonLoader";
 import { EXTERNAL_LINKS, CONTACT_INFO, CTA_TEXT } from "../constants";
 

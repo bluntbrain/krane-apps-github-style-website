@@ -1,5 +1,4 @@
 import { EXTERNAL_LINKS, CTA_TEXT } from "../constants";
-import { LucideIcon } from "lucide-react";
 
 // Define types without using JSX
 interface HighlightItem {

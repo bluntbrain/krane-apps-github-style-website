@@ -78,6 +78,25 @@ export const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/sharadindu-paul/',
     },
   },
+  {
+    id: 8,
+    name: 'Kartikeya Rawat',
+    role: 'Senior Marketing Executive',
+    avatar: 'https://ui-avatars.com/api/?name=Kartikeya+Rawat',
+    bio: 'Senior marketing executive with a strong background in digital marketing, brand strategy, and community building for tech startups.',
+    social: {},
+  },
+  {
+    id: 9,
+    name: 'Ritik Lakhwani',
+    role: 'Junior Blockchain Developer',
+    avatar: 'https://ui-avatars.com/api/?name=Ritik+Lakhwani',
+    bio: 'Junior blockchain developer passionate about smart contracts, DeFi, and learning new Web3 technologies.',
+    social: {
+      github: 'https://github.com/ritiklakhwani',
+      linkedin: 'https://www.linkedin.com/in/ritik-lakhwani-10062320a/',
+    },
+  },
 ];
 
 export const teamContent = `

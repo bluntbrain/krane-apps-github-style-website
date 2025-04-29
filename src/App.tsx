@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  useLocation,
-  Navigate,
-  PathRouteProps,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Layout from "./components/layout/Layout";
 import AboutPage from "./pages/About";
@@ -43,13 +37,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
-// Helper component to handle tag redirects
-const TagRedirectComponent: React.FC = () => {
-  const location = useLocation();
-  const tag = location.pathname.split("/").pop() || "";
-
-  return <Navigate to={`/blog?tag=${tag}`} replace />;
-};
 
 export default App;

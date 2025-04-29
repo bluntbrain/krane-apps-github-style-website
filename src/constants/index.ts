@@ -4,7 +4,7 @@
 
 // External links
 export const EXTERNAL_LINKS = {
-  CALENDAR: "https://calendar.app.google/vRgL3k468QSNGJX39",
+  CALENDAR: "https://calendly.com/ishan-lakhwani-esc8/30min",
   GITHUB: "https://github.com/Krane-Apps",
   LINKEDIN: "https://www.linkedin.com/company/kraneapps/",
 };
