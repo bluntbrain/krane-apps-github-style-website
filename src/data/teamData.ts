@@ -25,6 +25,17 @@ export const teamMembers = [
   },
   {
     id: 3,
+    name: 'Krishan Kumar Verma',
+    role: 'AI Engineer',
+    avatar: 'https://ui-avatars.com/api/?name=Krishan+Kumar+Verma',
+    bio: 'AI Engineer specializing in machine learning, natural language processing, and artificial intelligence solutions. Expert in developing intelligent systems and integrating AI capabilities into modern applications.',
+    social: {
+      github: 'https://github.com/krishankumarverma',
+      linkedin: 'https://www.linkedin.com/in/krishankumarverma/',
+    },
+  },
+  {
+    id: 4,
     name: 'Sparsh Agrawal',
     role: 'Senior Product Manager',
     avatar: 'https://ui-avatars.com/api/?name=Sparsh+Agrawal',
@@ -35,7 +46,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 4,
+    id: 5,
     name: 'Priyanshu Agarwal',
     role: 'Senior Blockchain Developer',
     avatar: '/images/team/priyanshu.jpg',
@@ -46,7 +57,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 5,
+    id: 6,
     name: 'Siddhant Lodha',
     role: 'Senior Front-end Developer (Freelancer)',
     avatar: 'https://ui-avatars.com/api/?name=Siddhant+Lodha',
@@ -57,7 +68,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 6,
+    id: 7,
     name: 'Arnav Sharma',
     role: 'UI/UX & Graphic Designer',
     avatar: 'https://ui-avatars.com/api/?name=Arnav+Kumar',
@@ -68,7 +79,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 7,
+    id: 8,
     name: 'Sharadindu Paul',
     role: 'React Native Developer (Freelancer)',
     avatar: 'https://ui-avatars.com/api/?name=Sharadindu+Paul',
@@ -79,7 +90,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 8,
+    id: 9,
     name: 'Kartikeya Rawat',
     role: 'Senior Marketing Executive',
     avatar: 'https://ui-avatars.com/api/?name=Kartikeya+Rawat',
@@ -87,7 +98,7 @@ export const teamMembers = [
     social: {},
   },
   {
-    id: 9,
+    id: 10,
     name: 'Ritik Lakhwani',
     role: 'Junior Blockchain Developer',
     avatar: 'https://ui-avatars.com/api/?name=Ritik+Lakhwani',
