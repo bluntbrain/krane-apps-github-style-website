@@ -42,7 +42,7 @@ export const portfolioProjects = [
       live: 'https://chainmonsters.xyz',
       ethglobal: 'https://ethglobal.com/showcase/chain-monsters'
     },
-    achievement: 'StarkHack Winner 🏆 March 2024',
+    achievement: 'StarkHack Winner',
     prize: '$4,000',
     category: 'blockchain',
     imageUrl: '/images/projects/chain-monsters.png',
@@ -60,7 +60,7 @@ export const portfolioProjects = [
       live: 'https://reporewards.xyz',
       ethglobal: 'https://ethglobal.com/showcase/reporewards'
     },
-    achievement: 'SuperHack Winner 🚀 February 2024',
+    achievement: 'SuperHack Winner',
     prize: '$10,000',
     category: 'blockchain',
     imageUrl: '/images/projects/repo-rewards.png',
@@ -78,7 +78,7 @@ export const portfolioProjects = [
       live: 'https://zkcreditscore.xyz',
       ethglobal: 'https://ethglobal.com/showcase/zk-credit-score'
     },
-    achievement: 'ETH Bangkok Winner 🏆 December 2023',
+    achievement: 'ETH Bangkok Winner',
     prize: '$2,000',
     category: 'blockchain',
     imageUrl: '/images/projects/zk-credit-score.png',

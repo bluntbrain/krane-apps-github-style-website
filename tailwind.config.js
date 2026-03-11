@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -11,6 +13,7 @@ export default {
         'text-primary': 'rgb(var(--color-text-primary) / <alpha-value>)',
         'text-secondary': 'rgb(var(--color-text-secondary) / <alpha-value>)',
         'accent': 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-blue': 'rgb(var(--color-accent-blue) / <alpha-value>)',
         'success': 'rgb(var(--color-success) / <alpha-value>)',
         'warning': 'rgb(var(--color-warning) / <alpha-value>)',
         'error': 'rgb(var(--color-error) / <alpha-value>)',
@@ -56,6 +59,6 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    typography,
   ],
 };

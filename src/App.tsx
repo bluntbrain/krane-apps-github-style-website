@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Layout from "./components/layout/Layout";
@@ -19,7 +18,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+      }}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<AboutPage />} />
@@ -28,16 +29,16 @@ function App() {
             <Route path="team" element={<TeamPage />} />
             <Route path="contact" element={<ContactPage />} />
 
-            {/* Blog Routes */}
+
             <Route path="blog" element={<BlogList />} />
             <Route path="blog/:slug" element={<BlogPostPage />} />
 
-            {/* Luna AI Legal Pages */}
+
             <Route path="lunaai/privacy" element={<LunaPrivacyPage />} />
             <Route path="lunaai/license" element={<LunaLicensePage />} />
             <Route path="lunaai/copyright" element={<LunaCopyrightPage />} />
 
-            {/* Fallback */}
+
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

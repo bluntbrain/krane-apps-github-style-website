@@ -23,7 +23,7 @@ const blogPosts: BlogPost[] = [
     date: "2023-09-10",
     author: "Priyanshu Agarwal",
     excerpt: "Learn how to design, develop, and deploy your own decentralized finance protocol with this comprehensive guide.",
-    tags: ["defi", "blockchain", "smart contracts", "solidity", "ethereum"],
+    tags: ["solana", "defi", "blockchain", "smart contracts", "solidity", "ethereum"],
     image: "/images/blog/defi-protocol.jpg",
     content: `# Building Your First DeFi Protocol: A Step-by-Step Guide
 
