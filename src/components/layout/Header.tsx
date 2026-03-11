@@ -1,139 +1,109 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Menu, Moon, Sun, X, Calendar } from "lucide-react";
-import { useTheme } from "../../context/ThemeContext";
+import { Link, NavLink } from "react-router-dom";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
 const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
-  return (
-    <header className="bg-bg-secondary border-b border-border sticky top-0 z-50">
-      <div className="mx-auto px-0 sm:px-2 lg:px-4">
-        <div className="flex h-14 sm:h-16 items-center justify-between">
-          <div className="pl-3 sm:pl-4">
-            <Link to="/" className="flex items-center">
-              <img
-                src="/images/logo.png"
-                alt="Krane Apps Logo"
-                className="h-8 sm:h-10 w-auto object-contain mr-1"
-              />
-              <span className="text-lg sm:text-xl font-bold">Krane Apps</span>
-            </Link>
-          </div>
+  const navLinks = [
+    { label: "Home", path: "/" },
+    { label: "Portfolio", path: "/portfolio" },
+    { label: "Team", path: "/team" },
+    { label: "Blog", path: "/blog" },
+    { label: "Contact", path: "/contact" },
+  ];
 
-          <div className="hidden md:flex md:items-center md:space-x-4 pr-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-md text-text-secondary hover:bg-bg-primary"
-              aria-label={
-                theme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 pt-6 pb-6 px-4 sm:px-8 pointer-events-none border-b border-border/40 bg-bg-primary/80 backdrop-blur-xl">
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between pointer-events-auto">
+        
+        <Link to="/" className="flex items-center gap-2 group">
+          <img
+            src="/images/logo.png"
+            alt="Krane Apps Logo"
+            className="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+          />
+          <span className="text-xl font-bold tracking-tight text-white hidden sm:block">KRANE APPS</span>
+        </Link>
+
+        <nav className="hidden lg:flex items-center gap-1">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              end={link.path === "/"}
+              className={({ isActive }) =>
+                `relative px-5 py-2.5 text-sm font-bold uppercase tracking-widest transition-all duration-300 ease-out ${
+                  isActive
+                    ? "text-white"
+                    : "text-text-secondary hover:text-white"
+                }`
               }
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            <a
-              href={EXTERNAL_LINKS.GITHUB}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="gh-btn"
+              {({ isActive }) => (
+                <>
+                  {link.label}
+                  <span
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-accent transition-all duration-300 ease-out ${
+                      isActive ? "w-full" : "w-0"
+                    }`}
+                  />
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="hidden sm:flex items-center">
+          <a
+            href={EXTERNAL_LINKS.CALENDAR}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white text-black px-6 py-2.5 text-sm font-bold uppercase tracking-wide hover:bg-accent hover:text-white transition-colors duration-300"
+          >
+            {CTA_TEXT.BOOK_CALL || "Get Started"}
+          </a>
+        </div>
+
+        <button
+          className="lg:hidden p-2 border border-border/60 text-white"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      <div 
+        className={`lg:hidden absolute top-full left-4 right-4 mt-2 bg-bg-primary border border-border/60 overflow-hidden transition-all duration-300 ease-out transform origin-top pointer-events-auto ${
+          mobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col p-4 space-y-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="px-4 py-3 text-white font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              GitHub
-            </a>
+              {link.label}
+            </Link>
+          ))}
+          <div className="pt-4 mt-2 border-t border-border/40 pb-2">
             <a
               href={EXTERNAL_LINKS.CALENDAR}
               target="_blank"
               rel="noopener noreferrer"
-              className="gh-btn gh-btn-primary flex items-center"
+              className="flex items-center justify-between bg-white text-black px-6 py-3 font-bold uppercase tracking-wide hover:bg-accent hover:text-white transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              <Calendar size={16} className="mr-2" />
-              {CTA_TEXT.BOOK_CALL}
+              {CTA_TEXT.BOOK_CALL || "Get Started"}
+              <ArrowUpRight size={20} />
             </a>
-          </div>
-
-          <div className="md:hidden pr-3 sm:pr-4">
-            <button
-              className="p-1.5 sm:p-2 rounded-md text-text-secondary"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
           </div>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-bg-secondary border-b border-border p-3 sm:p-4">
-          <div className="flex flex-col space-y-3">
-            <Link
-              to="/about"
-              className="sidebar-nav-item py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              to="/portfolio"
-              className="sidebar-nav-item py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="/team"
-              className="sidebar-nav-item py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Team
-            </Link>
-            <Link
-              to="/blog"
-              className="sidebar-nav-item py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
-            <Link
-              to="/contact"
-              className="sidebar-nav-item py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <div className="flex items-center justify-between pt-2">
-              <button
-                onClick={toggleTheme}
-                className="p-1.5 sm:p-2 rounded-md text-text-secondary hover:bg-bg-primary"
-              >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-              <div className="flex space-x-2">
-                <a
-                  href={EXTERNAL_LINKS.GITHUB}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="gh-btn text-sm py-1.5 px-2.5"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={EXTERNAL_LINKS.CALENDAR}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="gh-btn gh-btn-primary flex items-center text-sm py-1.5 px-2.5"
-                >
-                  <Calendar size={14} className="mr-1.5" />
-                  {CTA_TEXT.BOOK_CALL}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 };

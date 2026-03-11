@@ -15,18 +15,18 @@ interface TechCategory {
 export const aboutHighlights: HighlightItem[] = [
   {
     iconName: "Zap",
-    title: "Fast Execution",
-    description: "We build MVPs rapidly, helping you validate ideas and get to market quickly with functional solutions."
+    title: "Ship Fast, Break Nothing",
+    description: "We build lean product MVPs that actually work. No bloated architectures—just the core features you need to validate your idea with real users."
   },
   {
     iconName: "Shield",
-    title: "Blockchain Expertise",
-    description: "Specialized in smart contracts, dApps, and Web3 technologies across multiple blockchain platforms."
+    title: "On-Chain Development",
+    description: "Smart contracts and dApps built for Ethereum, Solana, and Polygon. We write secure code without relying on industry buzzwords."
   },
   {
     iconName: "Globe",
-    title: "Full-Stack Excellence",
-    description: "Our senior developers deliver high-quality solutions from front-end interfaces to back-end systems."
+    title: "Full-Stack Engineering",
+    description: "From lightweight, perfectly designed frontends to battle-tested database systems and APIs. We handle the entire engineering lifecycle."
   }
 ];
 
@@ -41,7 +41,7 @@ export const techStack: TechCategory[] = [
   },
   {
     name: "Blockchain",
-    technologies: ["Solidity", "Web3.js", "Ethers.js", "Hardhat", "Foundry"]
+    technologies: ["Solana", "Solidity", "Web3.js", "Ethers.js", "Hardhat", "Foundry"]
   },
   {
     name: "Mobile",
