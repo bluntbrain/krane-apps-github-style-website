@@ -1,8 +1,6 @@
 import React, { Suspense, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import {
-  Star,
-  GitFork,
   Award,
   Github,
   ArrowUpRight
@@ -100,9 +98,11 @@ const PortfolioPage: React.FC = () => {
                 <a href={featuredProject.links?.live} target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold uppercase tracking-wide hover:bg-accent hover:text-white transition-colors text-sm sm:text-base">
                   View Live <ArrowUpRight size={18} />
                 </a>
-                <a href={featuredProject.links?.github} target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border border-border/60 text-white font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors text-sm sm:text-base">
+{featuredProject.links?.github && (
+                <a href={featuredProject.links.github} target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border border-border/60 text-white font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors text-sm sm:text-base">
                   <Github size={18} /> Source
                 </a>
+                )}
               </div>
 
               <div className="flex gap-4 border-t border-border/40 pt-6">
@@ -151,9 +151,16 @@ const PortfolioPage: React.FC = () => {
                 className="group flex flex-col md:flex-row items-start lg:items-center py-6 sm:py-10 border-b border-border/60 hover:bg-white/[0.02] transition-colors gap-4 sm:gap-6 md:gap-12 pl-2 sm:pl-4"
               >
                 <div className="w-full lg:w-[35%] pr-4 flex flex-col gap-2">
-                  <h3 className="text-3xl lg:text-4xl font-extrabold tracking-tighter text-white group-hover:text-accent transition-colors uppercase leading-none">
-                    {project.title}
-                  </h3>
+                  <a
+                    href={project.links?.live || project.links?.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <h3 className="text-3xl lg:text-4xl font-extrabold tracking-tighter text-white group-hover:text-accent transition-colors uppercase leading-none cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </a>
                   {project.achievement && (
                     <div className="flex items-center text-accent group-hover:text-white text-sm font-bold uppercase tracking-wider mt-3 transition-colors duration-200">
                       <Award size={16} className="mr-2" />
@@ -181,27 +188,14 @@ const PortfolioPage: React.FC = () => {
                 </div>
 
                 <div className="w-full lg:w-[20%] flex flex-row lg:flex-col items-center justify-between lg:justify-center lg:items-end gap-4 mt-4 lg:mt-0">
-                   <div className="flex items-center gap-4 text-text-secondary">
-                      {project.stars > 0 && (
-                        <div className="flex items-center gap-1.5 font-bold">
-                          <Star size={14} /> {project.stars}
-                        </div>
-                      )}
-                      {project.forks > 0 && (
-                        <div className="flex items-center gap-1.5 font-bold">
-                          <GitFork size={14} /> {project.forks}
-                        </div>
-                      )}
-                   </div>
-                   
                    <div className="flex gap-4 border border-border/60 px-4 py-2 bg-bg-secondary/20">
                     {project.links?.github && (
                       <a href={project.links.github} target="_blank" rel="noreferrer" className="text-text-secondary hover:text-white transition-colors">
                         <Github size={20} />
                       </a>
                     )}
-                    {(project.links?.live || project.links?.ethglobal || project.links?.chrome || project.links?.docs) && (
-                      <a href={project.links?.live || project.links?.ethglobal || project.links?.chrome || project.links?.docs} target="_blank" rel="noreferrer" className="text-text-secondary hover:text-accent transition-colors">
+                    {project.links?.live && (
+                      <a href={project.links.live} target="_blank" rel="noreferrer" className="text-text-secondary hover:text-accent transition-colors">
                         <ArrowUpRight size={22} />
                       </a>
                     )}

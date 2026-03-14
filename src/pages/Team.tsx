@@ -64,7 +64,7 @@ const TeamPage: React.FC = () => {
                     }`}
                   />
                   <div className="absolute top-0 right-0 border-b border-l border-border/60 bg-bg-primary px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent z-20">
-                    {String(member.id).padStart(2, '0')}
+                    {String(index + 1).padStart(2, '0')}
                   </div>
                 </div>
 
