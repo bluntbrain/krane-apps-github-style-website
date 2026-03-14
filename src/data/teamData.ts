@@ -23,6 +23,17 @@ export const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/lovish-badlani-250a05151/',
     },
   },
+  {
+    id: 3,
+    name: 'Manu Sharma',
+    role: 'Design Engineer',
+    avatar: 'https://github.com/Quantapar.png',
+    bio: 'Creative design engineer combining aesthetics with technical expertise.',
+    social: {
+      github: 'https://github.com/Quantapar',
+      twitter: 'https://x.com/quantapar',
+    },
+  },
   // {
   //   id: 4,
   //   name: 'Sparsh Agrawal',
@@ -99,17 +110,6 @@ export const teamMembers = [
     social: {
       github: 'https://github.com/karmanays',
       twitter: 'https://x.com/xkarmanayx',
-    },
-  },
-  {
-    id: 8,
-    name: 'Manu Sharma',
-    role: 'Design Engineer',
-    avatar: 'https://github.com/Quantapar.png',
-    bio: 'Creative design engineer combining aesthetics with technical expertise.',
-    social: {
-      github: 'https://github.com/Quantapar',
-      twitter: 'https://x.com/quantapar',
     },
   },
   {

@@ -1,10 +1,12 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { EXTERNAL_LINKS, CTA_TEXT } from "../../constants";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const location = useLocation();
 
   const navLinks = [
     { label: "Home", path: "/" },
@@ -17,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-6 pb-6 px-4 sm:px-8 pointer-events-none border-b border-border/40 bg-bg-primary/80 backdrop-blur-xl">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between pointer-events-auto">
-        
+
         <Link to="/" className="flex items-center gap-2 group">
           <img
             src="/images/logo.png"
@@ -28,31 +30,38 @@ const Header: React.FC = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              end={link.path === "/"}
-              className={({ isActive }) =>
-                `relative px-5 py-2.5 text-sm font-bold uppercase tracking-widest transition-all duration-300 ease-out ${
+          {navLinks.map((link) => {
+            const isExact = link.path === "/";
+            const isActive = isExact
+              ? location.pathname === "/"
+              : location.pathname.startsWith(link.path);
+
+            return (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={isExact}
+                className={`relative px-5 py-2.5 text-sm font-bold uppercase tracking-widest transition-colors duration-300 ease-out ${
                   isActive
                     ? "text-white"
                     : "text-text-secondary hover:text-white"
-                }`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {link.label}
-                  <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-accent transition-all duration-300 ease-out ${
-                      isActive ? "w-full" : "w-0"
-                    }`}
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <motion.div
+                    layoutId="nav-slider"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-accent"
+                    transition={{
+                      type: "spring",
+                      stiffness: 350,
+                      damping: 30,
+                    }}
                   />
-                </>
-              )}
-            </NavLink>
-          ))}
+                )}
+              </NavLink>
+            );
+          })}
         </nav>
 
         <div className="hidden sm:flex items-center">
@@ -74,7 +83,7 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      <div 
+      <div
         className={`lg:hidden absolute top-full left-4 right-4 mt-2 bg-bg-primary border border-border/60 overflow-hidden transition-all duration-300 ease-out transform origin-top pointer-events-auto ${
           mobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
         }`}

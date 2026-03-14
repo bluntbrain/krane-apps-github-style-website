@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Star,
-  GitFork,
   Github,
   Globe,
   Award,
@@ -20,8 +18,6 @@ interface RepoCardProps {
   title: string;
   description: string;
   language?: string;
-  stars?: number;
-  forks?: number;
   links?: Links;
   tags?: string[];
   achievement?: string;
@@ -34,8 +30,6 @@ const RepoCard: React.FC<RepoCardProps> = ({
   title,
   description,
   language,
-  stars = 0,
-  forks = 0,
   links = {},
   tags = [],
   achievement,
@@ -68,28 +62,12 @@ const RepoCard: React.FC<RepoCardProps> = ({
         </div>
       )}
 
-      <div className="flex items-center text-sm text-text-secondary mb-4">
-        {language && (
-          <div className="flex items-center mr-4">
-            <span className="h-3 w-3 rounded-full bg-accent mr-1"></span>
-            <span>{language}</span>
-          </div>
-        )}
-
-        {stars > 0 && (
-          <div className="flex items-center mr-4">
-            <Star size={16} className="mr-1" />
-            <span>{stars}</span>
-          </div>
-        )}
-
-        {forks > 0 && (
-          <div className="flex items-center">
-            <GitFork size={16} className="mr-1" />
-            <span>{forks}</span>
-          </div>
-        )}
-      </div>
+      {language && (
+        <div className="flex items-center text-sm text-text-secondary mb-4">
+          <span className="h-3 w-3 rounded-full bg-accent mr-1"></span>
+          <span>{language}</span>
+        </div>
+      )}
 
       <div className="flex flex-wrap gap-2">
         {links.github && (
