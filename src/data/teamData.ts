@@ -126,17 +126,6 @@ export const teamMembers = [
     },
   },
   {
-    id: 10,
-    name: "Nagmani",
-    role: "Fullstack Engineer",
-    avatar: "https://github.com/Nagmani001.png",
-    bio: "Fullstack engineer with expertise in React, Node.js, and cloud infrastructure, focused on delivering robust production-ready systems.",
-    social: {
-      github: "https://github.com/Nagmani001",
-      twitter: "https://x.com/nagmani_twt",
-    },
-  },
-  {
     id: 11,
     name: "Divyansh Singh",
     role: "Fullstack Engineer",
@@ -157,6 +146,17 @@ export const teamMembers = [
       github: "https://github.com/qzMalekuz",
       twitter: "https://x.com/qzmalekuz",
       linkedin: "https://www.linkedin.com/in/qzmalekuz/",
+    },
+  },
+  {
+    id: 13,
+    name: "Shikhar Singh",
+    role: "Full Stack Developer",
+    avatar: "https://github.com/Shikhar-395.png",
+    bio: "Full stack developer skilled in building end-to-end web applications with modern frameworks and scalable backend architectures.",
+    social: {
+      github: "https://github.com/Shikhar-395",
+      twitter: "https://x.com/8ShikharSingh",
     },
   },
 ];
