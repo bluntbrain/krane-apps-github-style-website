@@ -126,17 +126,6 @@ export const teamMembers = [
     },
   },
   {
-    id: 10,
-    name: "Nagmani",
-    role: "Fullstack Engineer",
-    avatar: "https://github.com/Nagmani001.png",
-    bio: "Fullstack engineer with expertise in React, Node.js, and cloud infrastructure, focused on delivering robust production-ready systems.",
-    social: {
-      github: "https://github.com/Nagmani001",
-      twitter: "https://x.com/nagmani_twt",
-    },
-  },
-  {
     id: 11,
     name: "Divyansh Singh",
     role: "Fullstack Engineer",
