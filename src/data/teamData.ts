@@ -159,6 +159,17 @@ export const teamMembers = [
       linkedin: "https://www.linkedin.com/in/qzmalekuz/",
     },
   },
+  {
+    id: 13,
+    name: "Shikhar Singh",
+    role: "Full Stack Developer",
+    avatar: "https://github.com/Shikhar-395.png",
+    bio: "Full stack developer skilled in building end-to-end web applications with modern frameworks and scalable backend architectures.",
+    social: {
+      github: "https://github.com/Shikhar-395",
+      twitter: "https://x.com/8ShikharSingh",
+    },
+  },
 ];
 
 export const teamContent = `
